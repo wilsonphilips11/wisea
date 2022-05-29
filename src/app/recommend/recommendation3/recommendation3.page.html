@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start" routerLink="../recommendation2">
+            <ion-icon src='assets/icon/backButton.svg'></ion-icon>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            Wisea
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-group id="container">
+        <ion-item lines='none'>
+            <ion-img src="assets/Recommendation/recommend3.svg"></ion-img>
+        </ion-item>
+        <ion-title size="large" class="ion-text-center title">Pilih yang cocok ya</ion-title>
+        <ion-item lines='none'>
+            <ion-label color="medium" class="ion-text-wrap">Pilih dipilih.. Dari pertunjukan sampai museum kami sediakan semua!</ion-label>
+        </ion-item>
+        <ion-grid lines="none" class="ion-margin-end">
+            <ion-row>
+                <ion-col size="3" size-lg>
+                    <ion-img src="assets/Recommendation/performance.svg" class="budgetImg" (click)="showInput($event, 'pertunjukan')"></ion-img>
+                </ion-col>
+                <ion-col size="3" size-lg>
+                    <ion-img src="assets/Recommendation/workshop.svg" class="budgetImg" (click)="showInput($event, 'workshop')"></ion-img>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="3" size-lg>
+                    <ion-img src="assets/Recommendation/museum.svg" class="budgetImg" (click)="showInput($event, 'museum')"></ion-img>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item-group>
+</ion-content>

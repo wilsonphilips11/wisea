@@ -1,0 +1,41 @@
+ion-slides {
+  height: 100%;
+}
+
+ion-slide {
+  display: block;
+}
+
+ion-grid {
+  margin: 0;
+  padding: 0;
+}
+
+ion-button {
+  margin: 30px 16px 0px 16px;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+p {
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--ion-color-step-600, #BDBDBD);
+}
+
+h2 {
+  padding-top: 10%;
+}
+
+.login {
+  color: var(--ion-color-primary);
+}
+
+ion-slides {
+  margin-bottom: 15%;
+}
+

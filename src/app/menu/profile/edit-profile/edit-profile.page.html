@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot='start' routerLink="/menu/tabs/profile">
+      <ion-icon src='assets/icon/backButton.svg'></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Wisea
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="background" *ngIf="userProfile">
+  <ion-item-group id="container">
+    <ion-item lines='none'>
+      <ion-avatar class="proflePic">
+        <ion-img src="{{ photo.userPhoto }}"></ion-img>
+      </ion-avatar>
+      <ion-button class="btnImage" (click)="takePicture()"><ion-icon name="camera"></ion-icon></ion-button>
+    </ion-item>
+    <form class="edit-form" [formGroup]="form">
+      <mat-label>Nama Lengkap</mat-label>
+      <mat-form-field appearance="standard">
+        <input matInput formControlName="name" ngModel="{{ userProfile?.name }}">
+        <mat-error *ngIf="(form.get('name').dirty || form.get('name').touched) && form.get('name').errors">
+          <span *ngIf="form.get('name').errors.required">Full name is required</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-label>Username</mat-label>
+      <mat-form-field appearance="standard">
+        <input matInput formControlName="username" ngModel="{{ userProfile?.username }}">
+        <mat-error *ngIf="(form.get('username').dirty || form.get('username').touched) && form.get('username').errors">
+          <span *ngIf="form.get('username').errors.required">Username is required</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-label>Email</mat-label>
+      <mat-form-field appearance="standard">
+        <input matInput formControlName="email" ngModel="{{ userProfile?.email }}">
+        <mat-error *ngIf="(form.get('email').dirty || form.get('email').touched) && form.get('email').errors">
+          <span *ngIf="form.get('email').errors.required">Email is required</span>
+          <span *ngIf="form.get('email').errors.email">Email is invalid</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-label>Nomor Telepon</mat-label>
+      <mat-form-field appearance="standard">
+        <input matInput formControlName="phone" ngModel="{{ userProfile?.phone }}">
+        <mat-error *ngIf="(form.get('phone').dirty || form.get('phone').touched) && form.get('phone').errors">
+          <span *ngIf="form.get('phone').errors.required">Phone number is required</span>
+          <span *ngIf="form.get('phone').errors.minlength || form.get('phone').errors.maxlength">Phone needs to be between 10 - 12 characters</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-label>Password Baru</mat-label>
+      <mat-form-field appearance="standard">
+        <input matInput [type]="passwordHide ? 'password' : 'text'" formControlName="newPassword">
+        <mat-icon matSuffix (click)="passwordHide = !passwordHide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="passwordHide">
+          {{passwordHide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+        <mat-error *ngIf="(form.get('newPassword').dirty || form.get('newPassword').touched) && form.get('newPassword').errors">
+          <span *ngIf="form.get('newPassword').errors.minlength">Password needs to be 6 characters</span>
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <ion-button (click)="confirmationAlert()" expand="block">Submit</ion-button>
+    </ion-item-group>
+</ion-content>

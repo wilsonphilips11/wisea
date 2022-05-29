@@ -1,0 +1,120 @@
+#container {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 40%;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    transform: translateY(-50%);
+    color: var(--ion-color-primary);
+}
+
+#container ion-item {
+    margin-top: 24px;
+    text-align: center;
+    z-index: -1;
+}
+
+#container ion-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+ion-icon {
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.title {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.mapOverflow {
+    display: flex;
+}
+
+.map {
+    margin: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+.mapOverflow {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.mapPath:hover,
+.greenPath:hover,
+.pinkPath:hover,
+.purplePath:hover,
+.bluePath:hover,
+.orangePath:hover,
+.yellowPath:hover,
+.lightGreenPath:hover {
+    opacity: 100%;
+    stroke: black;
+    stroke-width: 1px;
+    cursor: pointer;
+}
+
+.greenPath {
+    fill: #00911d;
+    opacity: 50%;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.pinkPath {
+    fill: #ff0095;
+    opacity: 50%;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.bluePath {
+    fill: #5479ff;
+    opacity: 70%;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.purplePath {
+    fill: #ad06ca;
+    opacity: 50%;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.yellowPath {
+    fill: #ffee00;
+    opacity: 50%;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.orangePath {
+    fill: #ff9100;
+    opacity: 50%;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.lightGreenPath {
+    fill: #5aff51;
+    opacity: 50%;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.mapPath {
+    fill: #00a721;
+    opacity: 50%;
+    stroke: black;
+    stroke-width: 1px;
+}

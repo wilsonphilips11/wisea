@@ -1,0 +1,83 @@
+#container {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ion-color-secondary-contrast);
+
+  ion-title {
+    padding: 35px 0px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    color: #BDBDBD;
+    line-height: 20px;
+    font-weight: 350;
+  }
+
+  ion-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  ion-button {
+    margin-top: 10px;
+    font-weight: 700;
+  }
+}
+
+.planeImg {
+  left: 130px;
+  top: 0%;
+  z-index: 1;
+  float: right;
+  width: 200px;
+  position: absolute;
+  transform: rotate(-10deg);
+}
+
+.reset-password {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-label {
+  /*change color of label*/
+  color: #946E41 !important;
+  font-weight: 500;
+}
+
+.mat-icon {
+  color: #946E41;
+}
+
+.mat-button.mat-primary .mat-button-focus-overlay {
+  background-color: transparent;
+}
+
+::ng-deep {
+  .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #946E41 !important;
+  }
+
+  .mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #946E41 !important;
+  }
+
+  .mat-form-field-wrapper{
+    margin-bottom: 23px;
+  }
+}

@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" routerLink="/menu/tabs/explore">
+      <ion-icon class="header__icon" src='assets/icon/backButton.svg'></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+        Wisea
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-group class="payment">
+    <ion-item-group>
+      <ion-img class="payment-img" src="assets/icon/payment.svg"></ion-img>
+      <ion-title>
+        <div class="payment-title"><strong>Payment succeed</strong></div>
+        <p class="payment-subtitle">Pembayaranmu telah kami terima,<br>cek email untuk bukti bayar ya!</p>
+      </ion-title>
+    </ion-item-group>
+    <ion-button class="payment-btn" shape="round" (click)="goToExplore()">Done</ion-button>
+    <p class="payment-msg" (click)="goToHistoryDetail()">Cek detail pemesanan</p>
+  </ion-item-group>
+</ion-content>

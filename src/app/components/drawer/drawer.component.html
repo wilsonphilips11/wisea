@@ -1,0 +1,57 @@
+<!--#...: ViewChild-->
+<div class="drawer" #drawer style="overflow-y: auto; padding: 0px 0px 50px;">
+  <div class="ion-text-center">
+    <ion-button fill="clear" expand="full" (click)="toggleDrawer()">
+      <div class="drawer-pull"></div>
+    </ion-button>
+  </div>
+  <ion-grid fixed style="overflow-y: auto;">
+    <ion-row>
+      <ion-col>
+        <p class="ion-no-margin" style="font-weight: bold; text-transform: uppercase;">{{ (wisataDetail | async)?.nama }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-badge class="ion-no-margin" color="warning">{{ (wisataDetail | async)?.tiketTerjual }} telah membeli tiket</ion-badge>
+        <ion-badge style="margin-left: 5px" color="danger" *ngIf="(wisataDetail | async)?.tiketTersedia <= 0">Habis</ion-badge>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="ion-no-margin" style="font-weight: bold; color: orange">{{ (wisataDetail | async)?.harga | currency:'IDR':'symbol-narrow':'3.0' }} / tiket</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button shape="round" expand="full" [routerLink]="['/menu/tabs/explore/shopping-cart', (wisataDetail | async)?.id]" [disabled]="disabledBtn">Beli</ion-button>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <div>
+      <ion-row>
+        <ion-col>
+          <ion-icon class="ion-float-left" style="margin-right: 10px" src="assets/icon/date.svg"></ion-icon>
+          <p class="ion-no-margin" style="display: inline-block">{{ (wisataDetail | async)?.tanggal }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-icon class="ion-float-left" style="margin-right: 10px" src="assets/icon/time.svg"></ion-icon>
+          <p class="ion-no-margin" style="display: inline-block">{{ (wisataDetail | async)?.jam }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-icon class="ion-float-left" style="margin-right: 10px" src="assets/icon/location.svg"></ion-icon>
+          <p class="ion-no-margin" style="display: inline-block">{{ (wisataDetail | async)?.lokasi }}<ion-icon class="ion-float-end" style="margin-left: 5px" name="map-outline" [routerLink]="['/menu/tabs/explore/explore-detail/map-location', { lat: (wisataDetail | async)?.position[0], long: (wisataDetail | async)?.position[1] }]"></ion-icon></p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="ion-no-margin ion-text-justify text-truncate">{{ (wisataDetail | async)?.deskripsi }}</p>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+</div>

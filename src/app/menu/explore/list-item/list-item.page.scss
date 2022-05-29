@@ -1,0 +1,11 @@
+ion-item {
+  --border-radius: 10px !important;
+  --border-width: 1px !important;
+  --background: #FFF5DA;
+}
+
+.header {
+  &__icon{
+    font-size: 24px;
+  }
+}

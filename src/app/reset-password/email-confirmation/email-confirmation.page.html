@@ -1,0 +1,34 @@
+<ion-content color="background">
+  <ion-item-group id="container">
+    <ion-img src="assets/login/email-confirm.svg"></ion-img>
+    <ion-title>
+      <p>Diingat ya, jangan sampai lupa lagi</p>
+    </ion-title>
+    <form [formGroup]="confirmPasswordForm">
+      <mat-label>Password</mat-label>
+      <mat-form-field appearance="standard">
+        <input matInput [type]="passwordHide ? 'password' : 'text'" formControlName="password">
+        <mat-icon matSuffix (click)="passwordHide = !passwordHide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="passwordHide">
+          {{passwordHide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+        <mat-error *ngIf="(confirmPasswordForm.get('password').dirty || confirmPasswordForm.get('password').touched) && confirmPasswordForm.get('password').errors">
+          <span *ngIf="confirmPasswordForm.get('password').errors.required">Password is required</span>
+          <span *ngIf="confirmPasswordForm.get('password').errors.minlength">Password needs to be 6 characters</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-label>Konfirmasi Password</mat-label>
+      <mat-form-field appearance="standard">
+        <input matInput [type]="confirmHide ? 'password' : 'text'" formControlName="confirm">
+        <mat-icon matSuffix (click)="confirmHide = !confirmHide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="confirmHide">
+          {{confirmHide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+        <mat-error *ngIf="(confirmPasswordForm.get('confirm').dirty || confirmPasswordForm.get('confirm').touched) && confirmPasswordForm.get('confirm').errors">
+          <span *ngIf="confirmPasswordForm.get('confirm').errors.required">Confirm Password is required</span>
+          <span *ngIf="confirmPasswordForm.get('confirm').errors.mustMatch">Password and Confirm Password didn't match</span>
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <ion-button (click)="confirm()" expand="full" color="primary" [disabled]="!confirmPasswordForm.valid" shape="round">Reset</ion-button>
+    <ion-button routerLink="/login" expand="full" color="tertiary" shape="round">Batalkan</ion-button>
+  </ion-item-group>
+</ion-content>

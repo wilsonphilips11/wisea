@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot='start' routerLink="/menu/tabs/home">
+            <ion-icon src='assets/icon/backButton.svg'></ion-icon>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            Wisea
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-group id="container">
+        <ion-item lines='none'>
+            <ion-img src="assets/Recommendation/recommend1.svg"></ion-img>
+        </ion-item>
+        <ion-title size="large" class="ion-text-center title">Sesuaikan Budget</ion-title>
+        <ion-item lines='none'>
+            <ion-label color="medium" class="ion-text-wrap">Seperti menghitung hari bersama dirinya, budget kamu juga perlu dihitung nih..</ion-label>
+        </ion-item>
+        <ion-grid lines="none">
+            <ion-row>
+                <ion-col size="3" size-lg>
+                    <ion-img src="assets/Recommendation/less100k.svg" class="budgetImg" (click)="budgetInput($event, 'less')"></ion-img>
+                </ion-col>
+                <ion-col size="3" size-lg>
+                    <ion-img src="assets/Recommendation/more100k.svg" class="budgetImg" (click)="budgetInput($event, 'more')"></ion-img>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item-group>
+</ion-content>
