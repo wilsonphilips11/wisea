@@ -19,4 +19,4 @@ Ticket booking app for local art and culture tourism built using Ionic (Angular)
 * Order History
   * Show history of ordered tickets
 * Profile
-  * Edit user profile data
+  * Edit its user profile data
