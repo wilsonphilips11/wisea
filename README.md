@@ -20,3 +20,21 @@ Ticket booking app for local art and culture tourism built using Ionic (Angular)
   * Show history of ordered tickets
 * Profile
   * Edit its user profile data
+
+## Demo
+* [Wisea](https://wisea.vercel.app/)
+
+<br>
+<p align="center">
+  <img src="docs/1.gif" width="25%">
+  <img src="docs/2.gif" width="25%">
+  <img src="docs/3.gif" width="25%">
+</p>
+<br>
+
+<br>
+<p align="center">
+  <img src="docs/4.gif" width="25%">
+  <img src="docs/5.gif" width="25%">
+</p>
+<br>
