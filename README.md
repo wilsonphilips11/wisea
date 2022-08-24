@@ -38,3 +38,10 @@ Ticket booking app for local art and culture tourism built using Ionic (Angular)
   <img src="docs/5.gif" width="25%">
 </p>
 <br>
+
+## Contributors
+* Benny Richardson
+* Kevin Hendy
+* Vanessa Ardelia
+* Ventryshia Andiyani
+* Wilson Philips
