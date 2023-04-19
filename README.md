@@ -1,5 +1,5 @@
 ## Wisea
-Ticket booking app for local art and culture tourism built using Ionic (Angular) and Firebase.
+Ticket booking app for local art and culture tourism built using Ionic Angular and Firebase.
 
 
 ## Features
